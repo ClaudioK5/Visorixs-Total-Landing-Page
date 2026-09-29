@@ -1,0 +1,318 @@
+/* Podcast page additions. Creator landing styles stay in App.css. */
+
+.pod-mock {
+  background:
+    radial-gradient(ellipse 90% 70% at 100% 100%, rgba(255, 138, 31, 0.55), transparent 58%),
+    radial-gradient(ellipse 70% 50% at 0% 0%, rgba(255, 209, 47, 0.65), transparent 55%),
+    linear-gradient(160deg, #fff9c2 0%, #ffe7a3 42%, #ffb15a 100%);
+  padding: 0.85rem;
+}
+
+.pod-mock-top {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.15rem 0.25rem 0.7rem;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 0.92rem;
+  letter-spacing: -0.03em;
+  color: var(--mango-600);
+}
+
+.pod-mock-pill {
+  margin-left: auto;
+  padding: 0.18rem 0.5rem;
+  border-radius: 999px;
+  font-family: var(--font-body);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #7a2e10;
+  background: rgba(255, 252, 240, 0.72);
+  border: 1px solid rgba(255, 138, 31, 0.28);
+}
+
+.pod-mock-card {
+  background: linear-gradient(180deg, #fffcf0 0%, #ffffff 70%);
+  border-radius: 16px;
+  padding: 0.95rem 0.95rem 0.85rem;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  box-shadow:
+    0 16px 32px rgba(50, 29, 23, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+.pod-mock-status {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--mango-700);
+  margin-bottom: 0.2rem;
+}
+
+.pod-mock-episode {
+  font-family: var(--font-display);
+  font-size: 0.98rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  margin-bottom: 0.7rem;
+}
+
+.pod-mock-question {
+  background: linear-gradient(180deg, #fff6df 0%, #ffe6bf 100%);
+  border: 1px solid color-mix(in srgb, #ff8a1f 30%, #fff);
+  border-radius: 14px;
+  padding: 0.65rem 0.75rem;
+  margin-bottom: 0.7rem;
+}
+
+.pod-mock-question > span {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+}
+
+.pod-mock-question p,
+.pod-mock-answer p,
+.pod-mock-moments p {
+  font-size: 0.92rem;
+  font-weight: 600;
+  line-height: 1.45;
+  color: var(--ink);
+  text-transform: none;
+  letter-spacing: -0.01em;
+}
+
+.pod-mock-question p {
+  margin-top: 0.2rem;
+}
+
+.pod-mock-answer {
+  background: #fff;
+  border-radius: 14px;
+  padding: 0.75rem 0.8rem;
+  border: 1px solid color-mix(in srgb, #ff8a1f 16%, #ffefb0);
+}
+
+.pod-time {
+  font-family: var(--font-display);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: #e96a12;
+}
+
+.pod-track {
+  position: relative;
+  height: 6px;
+  margin-top: 0.85rem;
+  border-radius: 999px;
+  background: #ffefb0;
+}
+
+.pod-track-fill {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 55%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #ffd12f, #ff8a1f);
+}
+
+.pod-track-pin {
+  position: absolute;
+  left: 55%;
+  top: 50%;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #ff8a1f;
+  border: 2px solid #fff;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 2px 6px rgba(255, 138, 31, 0.45);
+}
+
+.pod-track-labels {
+  position: relative;
+  height: 1rem;
+  margin-top: 0.45rem;
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: var(--ink-muted);
+}
+
+.pod-track-labels span:nth-child(1) {
+  position: absolute;
+  left: 0;
+}
+
+.pod-track-labels span:nth-child(2) {
+  position: absolute;
+  left: 55%;
+  transform: translateX(-50%);
+}
+
+.pod-track-labels span:nth-child(3) {
+  position: absolute;
+  right: 0;
+}
+
+.pod-track-labels span:nth-child(2) {
+  color: #e96a12;
+}
+
+.pod-mock-moments {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.pod-mock-moments li {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.55rem;
+  align-items: start;
+  background: #fff;
+  border-radius: 12px;
+  padding: 0.65rem 0.7rem;
+  border: 1px solid color-mix(in srgb, #ff8a1f 16%, #ffefb0);
+}
+
+.pod-mock-moments .pod-time {
+  font-size: 0.82rem;
+  padding-top: 0.1rem;
+}
+
+.pod-shot {
+  max-width: 440px;
+  background: transparent;
+}
+
+.section-examples {
+  padding-top: 2.75rem;
+  padding-bottom: 2.75rem;
+}
+
+.example-note {
+  margin-top: 0.7rem;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--ink-muted);
+}
+
+.example-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+  align-items: start;
+}
+
+.example-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  text-align: left;
+  padding: 1.25rem 1.15rem 1.15rem;
+  background: #fff;
+  border-radius: var(--radius);
+  border: 1px solid color-mix(in srgb, #ff8a1f 20%, #ffefb0);
+  box-shadow: var(--shadow-soft);
+}
+
+.example-badge {
+  align-self: flex-start;
+  margin-bottom: 0.75rem;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #7a2e10;
+  background: var(--mango-100);
+  border: 1px solid color-mix(in srgb, #ff8a1f 28%, transparent);
+}
+
+.example-question {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.3;
+  color: var(--ink);
+  margin-bottom: 0.9rem;
+}
+
+.example-answer {
+  padding: 0.85rem 0.8rem;
+  border-radius: 14px;
+  background: linear-gradient(180deg, #fffdf8 0%, #fff6df 100%);
+  border: 1px solid color-mix(in srgb, #ff8a1f 18%, #ffefb0);
+  text-transform: none;
+  letter-spacing: normal;
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--ink-soft);
+}
+
+.example-answer > p {
+  font-size: 0.92rem;
+  font-weight: 600;
+  line-height: 1.45;
+  color: var(--ink);
+  text-transform: none;
+  letter-spacing: -0.01em;
+}
+
+.example-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.example-list li {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.5rem;
+  align-items: start;
+}
+
+.example-list li span {
+  font-family: var(--font-display);
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: #e96a12;
+  letter-spacing: -0.03em;
+  line-height: 1.45;
+}
+
+.example-list li p {
+  font-size: 0.88rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--ink);
+}
+
+.footer-podcast .footer-inner {
+  flex-wrap: wrap;
+}
+
+.footer-podcast a[aria-current="page"] {
+  color: var(--mango-600);
+}
+
+@media (max-width: 980px) {
+  .example-grid {
+    grid-template-columns: 1fr;
+    max-width: 36rem;
+    margin-inline: auto;
+  }
+}
