@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { site } from "../config/site";
 import {
   benefits,
@@ -10,6 +11,7 @@ import {
   useCasesSection,
   whatIs,
 } from "../content/copy";
+import { pricingTeaser } from "../content/pricing";
 import { usePageMeta } from "../hooks/usePageMeta";
 import { useReveal } from "../hooks/useReveal";
 import analysisExample from "../assets/envision-analysis-example.png";
@@ -122,9 +124,14 @@ function HomePage() {
           <span className="nav-mark" aria-hidden="true" />
           {site.productName}
         </a>
-        <a href={site.appUrl} className="btn btn-primary btn-sm" rel="noopener noreferrer">
-          {site.ctaLabel}
-        </a>
+        <div className="nav-actions">
+          <Link to="/pricing" className="nav-link">
+            Pricing
+          </Link>
+          <a href={site.appUrl} className="btn btn-primary btn-sm" rel="noopener noreferrer">
+            {site.ctaLabel}
+          </a>
+        </div>
       </header>
 
       <main id="top">
@@ -270,6 +277,17 @@ function HomePage() {
                 decoding="async"
               />
             </figure>
+          </div>
+        </section>
+
+        <section className="section band-cream section-pricing-teaser">
+          <div className="section-inner narrow">
+            <p className="eyebrow">{pricingTeaser.eyebrow}</p>
+            <h2 className="what-headline">{pricingTeaser.title}</h2>
+            <p className="what-body">{pricingTeaser.support}</p>
+            <Link to="/pricing" className="btn btn-primary btn-lg pricing-teaser-btn">
+              {pricingTeaser.cta}
+            </Link>
           </div>
         </section>
 

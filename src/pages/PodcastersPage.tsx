@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { site } from "../config/segmentSite";
 import {
   podcastBenefits,
@@ -131,9 +132,14 @@ function PodcastersPage() {
           <span className="nav-mark" aria-hidden="true" />
           Visorix
         </a>
-        <a href={site.appUrl} className="btn btn-primary btn-sm" rel="noopener noreferrer">
-          {podcastHero.cta}
-        </a>
+        <div className="nav-actions">
+          <Link to="/pricing" className="nav-link">
+            Pricing
+          </Link>
+          <a href={site.appUrl} className="btn btn-primary btn-sm" rel="noopener noreferrer">
+            {podcastHero.cta}
+          </a>
+        </div>
       </header>
 
       <main id="top">

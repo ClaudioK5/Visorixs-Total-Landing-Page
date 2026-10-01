@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { site } from "../config/segmentSite";
 import {
   benefits,
@@ -72,9 +73,14 @@ function CreatorsPage() {
           <span className="nav-mark" aria-hidden="true" />
           {site.productName}
         </a>
-        <a href={site.appUrl} className="btn btn-primary btn-sm" rel="noopener noreferrer">
-          {site.ctaLabel}
-        </a>
+        <div className="nav-actions">
+          <Link to="/pricing" className="nav-link">
+            Pricing
+          </Link>
+          <a href={site.appUrl} className="btn btn-primary btn-sm" rel="noopener noreferrer">
+            {site.ctaLabel}
+          </a>
+        </div>
       </header>
 
       <main id="top">
