@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 import CreatorsPage from "./pages/CreatorsPage";
 import HomePage from "./pages/HomePage";
 import PodcastersPage from "./pages/PodcastersPage";
+import PricingPage from "./pages/PricingPage";
 import "./App.css";
 
 function ScrollToTop() {
@@ -23,6 +24,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/podcasters" element={<PodcastersPage />} />
         <Route path="/creators" element={<CreatorsPage />} />
+        <Route path="/pricing" element={<PricingPage />} />
       </Routes>
     </BrowserRouter>
   );
