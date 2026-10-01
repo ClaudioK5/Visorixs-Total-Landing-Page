@@ -2,47 +2,53 @@ export const pricingHero = {
   eyebrow: "Pricing",
   title: "Simple pricing for the way you work with video.",
   support: "Choose the plan based on how much video you analyze each month.",
+  note: "No credits. No token system. Plans are based on how many hours of video you analyze each month.",
+  detail:
+    "If you upload one hour of video, one hour is deducted from your monthly allowance.",
 } as const;
 
 export const pricingPlans = [
   {
     name: "Starter",
     audience: "For light individual use",
-    summary: "Occasional analysis when you need a clear read on one video.",
-    price: "Monthly price set at launch",
+    price: "$8.99 / month",
+    hoursLabel: "Video hours / month",
+    hoursValue: "10 hours",
     points: [
-      "Monthly video allowance set with the plan",
-      "Upload size set with the plan",
       "General, Creator, and Podcast modes",
-      "Find moments, summarize, and get feedback",
-      "Extra hours listed when pricing opens",
+      "Standard upload size",
+      "Core find, summarize, and feedback workflows",
+      "Extra video hours available",
+      "3 free analyses before you subscribe",
     ],
   },
   {
     name: "Pro",
     audience: "For regular creators and podcasters",
-    summary: "Recurring video work, from content feedback to long episodes.",
-    price: "Monthly price set at launch",
+    badge: "Best for creators & podcasters",
+    price: "$19.99 / month",
+    hoursLabel: "Video hours / month",
+    hoursValue: "30 hours",
     featured: true,
     points: [
-      "A larger monthly allowance for regular use",
-      "Upload size set with the plan",
-      "General, Creator, and Podcast modes",
-      "Creator feedback, timestamps, summaries, and highlights",
-      "Extra hours listed when pricing opens",
+      "Everything in Starter",
+      "Larger upload size",
+      "Full creator and podcast workflows",
+      "Extra video hours available",
     ],
   },
   {
     name: "Business",
-    audience: "For heavier usage, teams, or more video hours",
-    summary: "More video, shared work, and room for a specialized workflow.",
-    price: "Monthly price set at launch",
+    audience: "For teams and heavier usage",
+    price: "$49.99 / month",
+    hoursLabel: "Video hours / month",
+    hoursValue: "50 hours",
     points: [
-      "Higher monthly allowance for teams and volume",
-      "Upload size set with the plan",
-      "General, Creator, and Podcast modes",
-      "Review, detection, summaries, and team workflows",
-      "Extra hours and custom workflows on request",
+      "Everything in Pro",
+      "Higher monthly video hours",
+      "Team workflows",
+      "Custom workflows available",
+      "Extra video hours on request",
     ],
   },
 ] as const;
@@ -51,12 +57,12 @@ export const pricingFaq = [
   {
     question: "What counts toward usage?",
     answer:
-      "Each analysis of an uploaded video counts toward your monthly allowance. The exact measure will be shown on the plan when pricing opens.",
+      "Usage is measured by the duration of the videos you analyze. A 30-minute video uses 30 minutes of your monthly allowance. A 2-hour podcast uses 2 hours.",
   },
   {
-    question: "What happens when I reach my monthly limit?",
+    question: "What happens when I reach my monthly video-hour limit?",
     answer:
-      "You can wait until the allowance resets, or move to a higher plan. Analyses you already completed stay available.",
+      "Upgrade your plan, add more video hours, or wait for your allowance to reset. Analyses you already completed stay available.",
   },
   {
     question: "Can I upgrade later?",
@@ -64,7 +70,7 @@ export const pricingFaq = [
   },
   {
     question: "Are the 3 free analyses still available?",
-    answer: "Yes. New accounts still get 3 free analyses. No credit card required.",
+    answer: "Yes. New accounts still get 3 free analyses before subscribing. No credit card required.",
   },
   {
     question: "Can businesses ask for custom workflows?",
@@ -81,6 +87,6 @@ export const pricingCustom = {
 export const pricingTeaser = {
   eyebrow: "Pricing",
   title: "Plans for every level of video work",
-  support: "From occasional analysis to regular creator, podcast, and business workflows.",
+  support: "From occasional analysis to regular creator, podcast, and business workflows. Usage is measured in video hours, not credits.",
   cta: "View pricing",
 } as const;
