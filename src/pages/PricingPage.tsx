@@ -37,6 +37,8 @@ function PricingPage() {
               <p className="hero-eyebrow animate-in">{pricingHero.eyebrow}</p>
               <h1 className="hero-brand animate-in delay-1">{pricingHero.title}</h1>
               <p className="hero-support animate-in delay-2">{pricingHero.support}</p>
+              <p className="pricing-note animate-in delay-3">{pricingHero.note}</p>
+              <p className="pricing-detail animate-in delay-4">{pricingHero.detail}</p>
             </div>
           </div>
         </section>
@@ -49,10 +51,14 @@ function PricingPage() {
                   key={plan.name}
                   className={"featured" in plan && plan.featured ? "pricing-card is-featured" : "pricing-card"}
                 >
+                  {"badge" in plan ? <p className="pricing-badge">{plan.badge}</p> : null}
                   <h2>{plan.name}</h2>
                   <p className="pricing-audience">{plan.audience}</p>
                   <p className="pricing-price">{plan.price}</p>
-                  <p className="pricing-summary">{plan.summary}</p>
+                  <p className="pricing-hours">
+                    <span>{plan.hoursLabel}</span>
+                    <strong>{plan.hoursValue}</strong>
+                  </p>
                   <ul>
                     {plan.points.map((point) => (
                       <li key={point}>{point}</li>
