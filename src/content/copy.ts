@@ -58,34 +58,6 @@ export const useCases = [
   },
 ] as const;
 
-export const benefitsSection = {
-  eyebrow: "From video to a useful result",
-  headline: "Watching the video is only\nthe first step.",
-} as const;
-
-export const benefits = [
-  {
-    icon: "find",
-    title: "Find",
-    body: "Locate the exact moment, action, discussion, object or event you are looking for.",
-  },
-  {
-    icon: "analyze",
-    title: "Analyze",
-    body: "Evaluate the video using criteria relevant to your specific task.",
-  },
-  {
-    icon: "understand",
-    title: "Understand",
-    body: "Extract answers, context, summaries and structured information from what actually happens.",
-  },
-  {
-    icon: "act",
-    title: "Act",
-    body: "Turn the analysis into something useful for your workflow — a decision, improvement, alert, timestamp, report or recommendation.",
-  },
-] as const;
-
 export const differentiator = {
   eyebrow: "Why Visorix",
   title: "The value is not simply that AI can watch and hear video.",
