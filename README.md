@@ -1,5 +1,6 @@
 # Visorix Landing Page
 
+
 General product landing page for **Visorix** — an AI assistant for understanding and working with video.
 
 CTAs → [app.visorix.tech](https://app.visorix.tech)
