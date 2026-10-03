@@ -1,3 +1,8 @@
 {
-  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
+  "rewrites": [
+    { "source": "/podcasters", "destination": "/podcasters/index.html" },
+    { "source": "/creators", "destination": "/creators/index.html" },
+    { "source": "/pricing", "destination": "/pricing/index.html" },
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
 }
