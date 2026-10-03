@@ -59,12 +59,13 @@ export const useCases = [
 ] as const;
 
 export const differentiator = {
-  eyebrow: "Why Visorix",
-  title: "The value is not simply that AI can watch and hear video.",
+  eyebrow: "Why Visorix?",
+  title: "Video understanding is only useful when it replaces work.",
   paragraphs: [
-    "The value is turning that capability into a specialized tool that knows what to look for, what matters and how to analyze it for your particular use case.",
-    "A creator may need retention feedback. A podcaster may need timestamps and highlights. A fitness platform may need movement analysis. A media company may need content detection. Another business may need something completely different.",
-    "Visorix adapts video intelligence to the job.",
+    "A raw multimodal AI can watch a video, understand what happens and answer questions about it.",
+    "Visorix builds workflows on top of that capability so the AI can perform tasks that would otherwise require a person to manually watch, review and analyze the video.",
+    "For long recordings or large volumes of video, that can mean hours of work reduced to minutes — finding the right moments, checking whether something happened, evaluating content, extracting information, or producing structured results automatically.",
+    "The goal is not simply to understand video. It is to automate the work humans normally have to do with video.",
   ],
   imageAlt: "Example of Visorix turning an uploaded video into useful analysis",
 } as const;
