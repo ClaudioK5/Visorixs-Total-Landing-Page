@@ -1,8 +1,6 @@
 import { Link } from "react-router-dom";
 import { site } from "../config/site";
 import {
-  benefits,
-  benefitsSection,
   differentiator,
   finalCta,
   howItWorks,
@@ -28,40 +26,6 @@ const iconProps = {
   strokeLinecap: "round" as const,
   strokeLinejoin: "round" as const,
 };
-
-function BenefitIcon({ name }: { name: string }) {
-  switch (name) {
-    case "find":
-      return (
-        <svg {...iconProps}>
-          <circle cx="11" cy="11" r="6.5" />
-          <path d="M16 16.5L20 20.5" />
-        </svg>
-      );
-    case "analyze":
-      return (
-        <svg {...iconProps}>
-          <path d="M4 19V5M4 19h16" />
-          <path d="M8 15v-4M12 15V8M16 15v-6" />
-        </svg>
-      );
-    case "understand":
-      return (
-        <svg {...iconProps}>
-          <path d="M21 15a4 4 0 01-4 4H8l-5 3V7a4 4 0 014-4h10a4 4 0 014 4z" />
-          <path d="M8.5 9.5h7M8.5 13h4.5" />
-        </svg>
-      );
-    case "act":
-      return (
-        <svg {...iconProps}>
-          <path d="M13 3L5 13h6l-1 8 9-12h-6l1-6z" />
-        </svg>
-      );
-    default:
-      return null;
-  }
-}
 
 function UseCaseIcon({ name }: { name: string }) {
   switch (name) {
@@ -228,29 +192,6 @@ function HomePage() {
                   </div>
                   <h3>{item.title}</h3>
                   <p>{item.body}</p>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className="section band-mango-soft section-benefits">
-          <div className="section-inner">
-            <header className="section-header">
-              <p className="eyebrow">{benefitsSection.eyebrow}</p>
-              <h2>
-                <BreakText text={benefitsSection.headline} />
-              </h2>
-            </header>
-
-            <div className="benefit-grid grid-4">
-              {benefits.map((b) => (
-                <article key={b.title} className="benefit-item">
-                  <div className="benefit-icon">
-                    <BenefitIcon name={b.icon} />
-                  </div>
-                  <h3>{b.title}</h3>
-                  <p>{b.body}</p>
                 </article>
               ))}
             </div>
