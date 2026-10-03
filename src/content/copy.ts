@@ -2,8 +2,7 @@ export const whatIs = {
   title: "What is Visorix?",
   headline: "Video AI specialized for the task you actually need solved.",
   paragraphs: [
-    "Visorix understands what happens inside a video — what is said, what is shown, when it happens and how the content develops — then applies that understanding to a specific workflow.",
-    "Instead of giving you a generic video chatbot, Visorix can be configured around a real job: finding exact moments, reviewing content, checking whether something happened, evaluating performance, extracting information, improving creative content, or solving a completely custom video-analysis task.",
+    "Visorix turns video understanding into specialized workflows — whether you need to find something, evaluate something, extract useful information, improve content, or build a completely custom video-analysis task.",
   ],
 } as const;
 
