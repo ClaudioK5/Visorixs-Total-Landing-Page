@@ -15,17 +15,17 @@ export const howItWorks = [
   {
     step: "1",
     title: "Upload your video",
-    body: "Add the video or recording you need to work with.",
+    body: "Add the video you want to work with.",
   },
   {
     step: "2",
-    title: "Define the job",
-    body: "Use a specialized Visorix workflow or tell it exactly what needs to be detected, evaluated, found or analyzed.",
+    title: "Choose your mode",
+    body: "Select the specialized Visorix workflow for your use case.",
   },
   {
     step: "3",
-    title: "Get task-specific results",
-    body: "Visorix analyzes the actual audio and visual content and returns results built around that specific objective.",
+    title: "Get task-specific analysis",
+    body: "Visorix analyzes the video using that workflow and returns the results that matter for the job.",
   },
 ] as const;
 
