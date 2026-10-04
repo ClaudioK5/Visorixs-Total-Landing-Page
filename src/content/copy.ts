@@ -63,8 +63,7 @@ export const differentiator = {
   title: "Video understanding is only useful when it replaces work.",
   paragraphs: [
     "A raw multimodal AI can watch a video, understand what happens and answer questions about it.",
-    "Visorix builds workflows on top of that capability so the AI can use its understanding of the video to execute the actual task a human would otherwise have to perform after watching it.",
-    "For long recordings or large volumes of video, that can turn hours of manual work into minutes — because the AI does not stop at understanding the video; it carries out the workflow built on top of that understanding.",
+    "Visorix builds workflows on top of that capability so the AI can use its understanding of the video to execute the actual task a human would otherwise have to perform after watching it — turning hours of manual work into minutes, especially for long recordings or large volumes of video.",
     "The goal is not simply to understand video. It is to automate the work humans normally have to do with video.",
   ],
   imageAlt: "Example of Visorix turning an uploaded video into useful analysis",
