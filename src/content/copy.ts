@@ -1,8 +1,8 @@
 export const whatIs = {
   title: "What is Visorix?",
-  headline: "Video AI specialized for the task you actually need solved.",
+  headline: "A workflow layer built on advanced multimodal video AI.",
   paragraphs: [
-    "Visorix turns video understanding into specialized workflows — whether you need to find something, evaluate something, extract useful information, improve content, or build a completely custom video-analysis task.",
+    "Visorix uses AI that can see, hear and understand what happens inside a video, then applies specialized logic, instructions and workflows on top of that capability to perform specific tasks.",
   ],
 } as const;
 
