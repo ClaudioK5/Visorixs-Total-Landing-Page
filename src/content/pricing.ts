@@ -53,6 +53,55 @@ export const pricingPlans = [
   },
 ] as const;
 
+export const extraHours = {
+  lead: "Need more video hours without changing your plan? Add extra hours whenever you need them.",
+  rule: "Extra-hour packs require an active subscription. Monthly hours reset every billing cycle. Purchased extra hours stay until they are used, while your subscription remains active.",
+  packs: [
+    {
+      name: "Extra 5 hours",
+      audience: "For a small monthly top-up",
+      price: "$5.99",
+      hoursLabel: "Additional video hours",
+      hoursValue: "5 hours",
+      points: [
+        "Added to your current plan",
+        "Use with your existing workflows",
+        "Available immediately",
+        "No subscription change required",
+      ],
+      cta: "Add 5 hours",
+    },
+    {
+      name: "Extra 15 hours",
+      audience: "For additional projects and heavier weeks",
+      price: "$14.99",
+      hoursLabel: "Additional video hours",
+      hoursValue: "15 hours",
+      points: [
+        "Added to your current plan",
+        "Good for campaigns and longer projects",
+        "Available immediately",
+        "No subscription change required",
+      ],
+      cta: "Add 15 hours",
+    },
+    {
+      name: "Extra 40 hours",
+      audience: "For high-volume periods",
+      price: "$34.99",
+      hoursLabel: "Additional video hours",
+      hoursValue: "40 hours",
+      points: [
+        "Added to your current plan",
+        "Designed for large workloads",
+        "Available immediately",
+        "No subscription change required",
+      ],
+      cta: "Add 40 hours",
+    },
+  ],
+} as const;
+
 export const pricingFaq = [
   {
     question: "What counts toward usage?",
