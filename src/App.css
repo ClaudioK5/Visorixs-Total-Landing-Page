@@ -894,6 +894,55 @@
   font-size: clamp(1.9rem, 4.2vw, 2.8rem);
 }
 
+.pricing-switch {
+  display: flex;
+  width: fit-content;
+  margin: 0 auto 1.75rem;
+  padding: 0.28rem;
+  gap: 0.2rem;
+  border-radius: 999px;
+  background: #fff;
+  border: 1px solid color-mix(in srgb, #ff8a1f 28%, #ffefb0);
+  box-shadow: var(--shadow-soft);
+}
+
+.pricing-switch button {
+  border: 0;
+  background: transparent;
+  border-radius: 999px;
+  padding: 0.55rem 1.15rem;
+  font: inherit;
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--ink-soft);
+  cursor: pointer;
+}
+
+.pricing-switch button[aria-selected="true"] {
+  color: #3a2218;
+  background: linear-gradient(135deg, #ffd12f, #ff8a1f);
+}
+
+.pricing-pack-intro {
+  max-width: 40rem;
+  margin: 0 auto 1.5rem;
+  text-align: center;
+}
+
+.pricing-pack-intro p {
+  font-size: 1.05rem;
+  font-weight: 650;
+  line-height: 1.45;
+  color: var(--ink);
+}
+
+.pricing-pack-intro .pricing-pack-rule {
+  margin-top: 0.55rem;
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--ink-soft);
+}
+
 .pricing-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1039,19 +1088,49 @@
 
 .faq-item {
   text-align: left;
-  padding: 1.1rem 1.15rem;
+  padding: 0.95rem 1.15rem;
   background: #fff;
   border-radius: var(--radius);
   border: 1px solid color-mix(in srgb, #ff8a1f 20%, #ffefb0);
   box-shadow: var(--shadow-soft);
 }
 
+.faq-item summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  cursor: pointer;
+  list-style: none;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary::after {
+  content: "";
+  flex: 0 0 auto;
+  width: 0.5rem;
+  height: 0.5rem;
+  margin-top: -0.2rem;
+  border-right: 2px solid var(--mango-600);
+  border-bottom: 2px solid var(--mango-600);
+  transform: rotate(45deg);
+}
+
+.faq-item[open] summary::after {
+  margin-top: 0.2rem;
+  transform: rotate(-135deg);
+}
+
 .faq-item h3 {
   font-size: 1.02rem;
-  margin-bottom: 0.35rem;
+  margin-bottom: 0;
 }
 
 .faq-item p {
+  margin-top: 0.7rem;
   font-size: 0.92rem;
   color: var(--ink-soft);
   line-height: 1.5;
