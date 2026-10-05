@@ -3,8 +3,6 @@ export const pricingHero = {
   title: "Simple pricing for the way you work with video.",
   support: "Choose the plan based on how much video you analyze each month.",
   note: "No credits. No token system. Plans are based on how many hours of video you analyze each month.",
-  detail:
-    "If you upload one hour of video, one hour is deducted from your monthly allowance.",
 } as const;
 
 export const pricingPlans = [
