@@ -38,7 +38,6 @@ function PricingPage() {
               <h1 className="hero-brand animate-in delay-1">{pricingHero.title}</h1>
               <p className="hero-support animate-in delay-2">{pricingHero.support}</p>
               <p className="pricing-note animate-in delay-3">{pricingHero.note}</p>
-              <p className="pricing-detail animate-in delay-4">{pricingHero.detail}</p>
             </div>
           </div>
         </section>
