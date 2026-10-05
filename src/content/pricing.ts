@@ -8,12 +8,13 @@ export const pricingHero = {
 export const pricingPlans = [
   {
     name: "Starter",
-    audience: "For light individual use",
+    audience: "For short-form content and occasional longer videos",
     price: "$8.99 / month",
     hoursLabel: "Video hours / month",
     hoursValue: "10 hours",
     points: [
       "General, Creator, and Podcast modes",
+      "Ideal for short-form video analysis",
       "Standard upload size",
       "Core find, summarize, and feedback workflows",
       "Extra video hours available",
@@ -22,8 +23,8 @@ export const pricingPlans = [
   },
   {
     name: "Pro",
-    audience: "For regular creators and podcasters",
-    badge: "Best for creators & podcasters",
+    audience: "For marketers, creators, and regular video analysis",
+    badge: "Best for regular use",
     price: "$19.99 / month",
     hoursLabel: "Video hours / month",
     hoursValue: "30 hours",
@@ -31,13 +32,14 @@ export const pricingPlans = [
     points: [
       "Everything in Starter",
       "Larger upload size",
-      "Full creator and podcast workflows",
+      "More video hours for regular use",
+      "Creator, podcast, and marketing workflows",
       "Extra video hours available",
     ],
   },
   {
     name: "Business",
-    audience: "For teams and heavier usage",
+    audience: "For teams, podcasts, and heavier video workflows",
     price: "$49.99 / month",
     hoursLabel: "Video hours / month",
     hoursValue: "50 hours",
