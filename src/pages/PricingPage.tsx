@@ -1,12 +1,14 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { site } from "../config/site";
-import { pricingCustom, pricingFaq, pricingHero, pricingPlans } from "../content/pricing";
+import { extraHours, pricingCustom, pricingFaq, pricingHero, pricingPlans } from "../content/pricing";
 import { usePageMeta } from "../hooks/usePageMeta";
 import { useReveal } from "../hooks/useReveal";
 import "../App.css";
 
 function PricingPage() {
   const pageRef = useReveal();
+  const [pricingView, setPricingView] = useState<"plans" | "hours">("plans");
   usePageMeta(
     "Visorix — Pricing",
     "Simple pricing for the way you work with video. Choose a plan based on how much video you analyze each month.",
@@ -44,30 +46,88 @@ function PricingPage() {
 
         <section className="section band-cream section-pricing">
           <div className="section-inner">
-            <div className="pricing-grid">
-              {pricingPlans.map((plan) => (
-                <article
-                  key={plan.name}
-                  className={"featured" in plan && plan.featured ? "pricing-card is-featured" : "pricing-card"}
-                >
-                  {"badge" in plan ? <p className="pricing-badge">{plan.badge}</p> : null}
-                  <h2>{plan.name}</h2>
-                  <p className="pricing-audience">{plan.audience}</p>
-                  <p className="pricing-price">{plan.price}</p>
-                  <p className="pricing-hours">
-                    <span>{plan.hoursLabel}</span>
-                    <strong>{plan.hoursValue}</strong>
-                  </p>
-                  <ul>
-                    {plan.points.map((point) => (
-                      <li key={point}>{point}</li>
+            <div className="pricing-switch" role="tablist" aria-label="Pricing options">
+              <button
+                type="button"
+                role="tab"
+                id="pricing-tab-plans"
+                aria-selected={pricingView === "plans"}
+                aria-controls="pricing-panel"
+                onClick={() => setPricingView("plans")}
+              >
+                Monthly plans
+              </button>
+              <button
+                type="button"
+                role="tab"
+                id="pricing-tab-hours"
+                aria-selected={pricingView === "hours"}
+                aria-controls="pricing-panel"
+                onClick={() => setPricingView("hours")}
+              >
+                Extra hours
+              </button>
+            </div>
+
+            <div
+              id="pricing-panel"
+              role="tabpanel"
+              aria-labelledby={pricingView === "plans" ? "pricing-tab-plans" : "pricing-tab-hours"}
+            >
+              {pricingView === "hours" ? (
+                <div className="pricing-pack-intro">
+                  <p>{extraHours.lead}</p>
+                  <p className="pricing-pack-rule">{extraHours.rule}</p>
+                </div>
+              ) : null}
+
+              <div className="pricing-grid">
+                {pricingView === "plans"
+                  ? pricingPlans.map((plan) => (
+                      <article
+                        key={plan.name}
+                        className={
+                          "featured" in plan && plan.featured ? "pricing-card is-featured" : "pricing-card"
+                        }
+                      >
+                        {"badge" in plan ? <p className="pricing-badge">{plan.badge}</p> : null}
+                        <h2>{plan.name}</h2>
+                        <p className="pricing-audience">{plan.audience}</p>
+                        <p className="pricing-price">{plan.price}</p>
+                        <p className="pricing-hours">
+                          <span>{plan.hoursLabel}</span>
+                          <strong>{plan.hoursValue}</strong>
+                        </p>
+                        <ul>
+                          {plan.points.map((point) => (
+                            <li key={point}>{point}</li>
+                          ))}
+                        </ul>
+                        <a href={site.appUrl} className="btn btn-primary btn-sm" rel="noopener noreferrer">
+                          {site.ctaLabel}
+                        </a>
+                      </article>
+                    ))
+                  : extraHours.packs.map((pack) => (
+                      <article key={pack.name} className="pricing-card">
+                        <h2>{pack.name}</h2>
+                        <p className="pricing-audience">{pack.audience}</p>
+                        <p className="pricing-price">{pack.price}</p>
+                        <p className="pricing-hours">
+                          <span>{pack.hoursLabel}</span>
+                          <strong>{pack.hoursValue}</strong>
+                        </p>
+                        <ul>
+                          {pack.points.map((point) => (
+                            <li key={point}>{point}</li>
+                          ))}
+                        </ul>
+                        <a href={site.appUrl} className="btn btn-primary btn-sm" rel="noopener noreferrer">
+                          {pack.cta}
+                        </a>
+                      </article>
                     ))}
-                  </ul>
-                  <a href={site.appUrl} className="btn btn-primary btn-sm" rel="noopener noreferrer">
-                    {site.ctaLabel}
-                  </a>
-                </article>
-              ))}
+              </div>
             </div>
           </div>
         </section>
@@ -80,10 +140,12 @@ function PricingPage() {
             </header>
             <div className="faq-list">
               {pricingFaq.map((item) => (
-                <article key={item.question} className="faq-item">
-                  <h3>{item.question}</h3>
+                <details key={item.question} className="faq-item">
+                  <summary>
+                    <h3>{item.question}</h3>
+                  </summary>
                   <p>{item.answer}</p>
-                </article>
+                </details>
               ))}
             </div>
           </div>
